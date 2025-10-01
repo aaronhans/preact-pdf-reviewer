@@ -1,0 +1,375 @@
+/* Custom styles to complement Web Awesome layout */
+
+/* App-level styles */
+.app-container {
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+.app-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.app-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.app-subtitle {
+  font-size: 1.25rem;
+}
+
+.app-main {
+  max-width: 65rem;
+  margin: 0 auto;
+  --wa-space-m: 1.5rem; /* Gap between stack items */
+}
+
+/* Domain Input Card */
+.domain-input-card {
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.domain-input-card .wa-stack {
+  --wa-space-m: 1rem;
+}
+
+.error-message {
+  background-color: #fef2f2;
+  border: 1px solid #fecaca;
+  color: #991b1b;
+  padding: 0.75rem;
+  border-radius: 6px;
+}
+
+/* Progress Card */
+.progress-card {
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.progress-steps {
+  margin-bottom: 1.5rem;
+  justify-content: space-between;
+  --wa-space-m: 1rem;
+}
+
+.progress-step {
+  flex: 1;
+  text-align: center;
+  align-items: center;
+  --wa-space-m: 0.5rem;
+  transition: opacity 0.3s ease;
+}
+
+.progress-step.inactive {
+  opacity: 0.4;
+}
+
+.progress-step.active {
+  opacity: 1;
+}
+
+.progress-icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  margin: 0 auto 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.progress-icon.pending {
+  background-color: var(--wa-color-neutral-200, #e5e7eb);
+  color: var(--wa-color-neutral-500, #6b7280);
+}
+
+.progress-icon.current {
+  background-color: var(--wa-color-primary-500, #3b82f6);
+  color: var(--wa-color-neutral-0, white);
+}
+
+.progress-icon.completed {
+  background-color: var(--wa-color-success-500, #10b981);
+  color: var(--wa-color-neutral-0, white);
+}
+
+.progress-label {
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.progress-step.inactive .progress-label {
+  opacity: 0.6;
+}
+
+.progress-bar {
+  height: 0.25rem;
+  background-color: var(--wa-color-neutral-200, #e5e7eb);
+  border-radius: 0.125rem;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(to right, var(--wa-color-primary-500, #3b82f6), var(--wa-color-success-500, #10b981));
+  border-radius: 0.125rem;
+  transition: width 0.5s ease;
+}
+
+/* Spinner animation */
+.spinner-small {
+  width: 16px;
+  height: 16px;
+  border: 2px solid transparent;
+  border-top: 2px solid currentColor;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* PDF Results Styles */
+.results-container {
+  /* Container for results section */
+}
+
+.results-card {
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.results-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.results-subtitle {
+  margin-bottom: 1.5rem;
+  opacity: 0.8;
+}
+
+.stats-grid {
+  --min-column-size: 150px;
+  margin-bottom: 2rem;
+}
+
+.stat-card {
+  text-align: center;
+  padding: 1.5rem 1rem;
+}
+
+.stat-value {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.stat-label {
+  font-size: 0.875rem;
+  opacity: 0.8;
+}
+
+.pdf-section {
+  margin-top: 2rem;
+}
+
+.pdf-section h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.pdf-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.pdf-item {
+  padding: 1rem;
+  margin-bottom: 0.75rem;
+  border-radius: 8px;
+  border-left: 4px solid var(--wa-color-primary-500, #3b82f6);
+}
+
+.pdf-url {
+  font-weight: 500;
+  word-break: break-all;
+  margin-bottom: 0.5rem;
+}
+
+.pdf-size {
+  font-size: 0.875rem;
+  opacity: 0.8;
+}
+
+/* Audit Results Styles */
+.audit-list {
+  /* Container for audit items */
+}
+
+.audit-item {
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border: 1px solid;
+}
+
+.audit-url {
+  font-weight: 600;
+  margin-bottom: 1rem;
+  word-break: break-all;
+  font-size: 1.1rem;
+}
+
+.no-issues {
+  font-size: 1.1rem;
+  font-weight: 500;
+  text-align: center;
+  padding: 1rem;
+  border-radius: 8px;
+  color: var(--wa-color-success-600, #16a34a);
+}
+
+/* VeraPDF Report Styles */
+.verapdf-report {
+  border-radius: 8px;
+  padding: 1rem;
+  margin-top: 0.75rem;
+}
+
+.compliance-overview {
+  margin-bottom: 1rem;
+}
+
+.compliance-status {
+  font-size: 1.1rem;
+  font-weight: bold;
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  margin-bottom: 0.75rem;
+  text-align: center;
+}
+
+.compliance-status.compliant {
+  background-color: var(--wa-color-success-100, #dcfce7);
+  color: var(--wa-color-success-800, #166534);
+  border: 1px solid var(--wa-color-success-300, #86efac);
+}
+
+.compliance-status.non-compliant {
+  background-color: var(--wa-color-danger-100, #fee2e2);
+  color: var(--wa-color-danger-800, #991b1b);
+  border: 1px solid var(--wa-color-danger-300, #fca5a5);
+}
+
+.overview-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center;
+}
+
+.overview-stats .stat {
+  padding: 0.375rem 0.75rem;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  border: 1px solid var(--wa-color-neutral-300, #d1d5db);
+}
+
+.overview-stats .stat.critical {
+  background-color: var(--wa-color-danger-50, #fef2f2);
+  border-color: var(--wa-color-danger-200, #fecaca);
+  color: var(--wa-color-danger-700, #b91c1c);
+}
+
+.problem-areas {
+  margin-top: 1rem;
+}
+
+.problem-areas h4 {
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+
+.problem-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.problem-area {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.625rem 0.75rem;
+  border-radius: 6px;
+  border-left: 4px solid var(--wa-color-primary-500, #3b82f6);
+}
+
+.area-name {
+  font-weight: 500;
+}
+
+.issue-count {
+  background: var(--wa-color-primary-500, #3b82f6);
+  color: white;
+  padding: 0.125rem 0.5rem;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.audit-metadata {
+  margin-top: 0.75rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--wa-color-neutral-200, #e5e7eb);
+  text-align: center;
+}
+
+.audit-metadata small {
+  font-style: italic;
+  opacity: 0.7;
+}
+
+/* Legacy Audit Issues */
+.audit-issues {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.audit-issue {
+  padding: 0.75rem;
+  margin-bottom: 0.5rem;
+  border-radius: 6px;
+  border-left: 3px solid var(--wa-color-danger-500, #ef4444);
+}
+
+.issue-type {
+  font-weight: 600;
+  color: var(--wa-color-danger-600, #dc2626);
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  margin-bottom: 0.25rem;
+}
+
+.issue-description {
+  opacity: 0.8;
+}
